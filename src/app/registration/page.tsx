@@ -1427,11 +1427,29 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
       let photosIPFS: Array<{ name: string; ipfsHash: string; mimeType: string }> = [];
       if (formData.propertyPhotos.length > 0) {
         try {
-          const uploadedPhotos = await uploadFilesToIPFS(formData.propertyPhotos);
+          // Verify all photos are still valid File objects before uploading
+          const validPhotos = formData.propertyPhotos.filter((photo, index) => {
+            if (!photo || !(photo instanceof File)) {
+              console.warn(`Photo ${index + 1} is not a valid File object`);
+              return false;
+            }
+            if (photo.size === 0) {
+              console.warn(`Photo ${index + 1} (${photo.name}) is empty`);
+              return false;
+            }
+            return true;
+          });
+
+          if (validPhotos.length !== formData.propertyPhotos.length) {
+            throw new Error(`${formData.propertyPhotos.length - validPhotos.length} photo(s) are invalid or corrupted. Please re-upload them.`);
+          }
+
+          console.log(`Starting upload of ${validPhotos.length} property photos...`);
+          const uploadedPhotos = await uploadFilesToIPFS(validPhotos);
           
           // Validate all photos were uploaded
-          if (uploadedPhotos.length !== formData.propertyPhotos.length) {
-            throw new Error(`Only ${uploadedPhotos.length} of ${formData.propertyPhotos.length} photos were uploaded successfully`);
+          if (uploadedPhotos.length !== validPhotos.length) {
+            throw new Error(`Only ${uploadedPhotos.length} of ${validPhotos.length} photos were uploaded successfully`);
           }
           
           // Map the uploaded photos to match the expected format (hash -> ipfsHash)
@@ -1445,9 +1463,20 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
               mimeType: photo.mimeType || 'image/jpeg',
             };
           });
+          
+          console.log(`✅ Successfully uploaded ${photosIPFS.length} property photos to IPFS`);
         } catch (error) {
           console.error('❌ Error uploading photos to IPFS:', error);
-          throw new Error(`Failed to upload property photos: ${error instanceof Error ? error.message : 'Unknown error'}`);
+          const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+          
+          // Provide more helpful error messages for mobile
+          if (errorMessage.includes('timeout') || errorMessage.includes('Network')) {
+            throw new Error(`Network error uploading property photos. Please check your internet connection and try again.`);
+          } else if (errorMessage.includes('Failed to upload photo')) {
+            throw new Error(`Failed to upload property photos: ${errorMessage}. Please try uploading smaller images or check your connection.`);
+          } else {
+            throw new Error(`Failed to upload property photos: ${errorMessage}`);
+          }
         }
       }
 
