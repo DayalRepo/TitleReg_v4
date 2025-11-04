@@ -678,7 +678,7 @@ Registration Fee: ₹${parseFloat(result.registrationFee).toLocaleString('en-IN'
 SELLER INFORMATION
 ------------------
 Name: ${result.sellerName}
-Father's Name: ${result.sellerFatherName}
+Father&apos;s Name: ${result.sellerFatherName}
 ${result.sellerAge ? `Age: ${result.sellerAge}` : ''}
 ${result.sellerAddress ? `Address: ${result.sellerAddress}` : ''}
 ${result.sellerPhone ? `Phone: ${result.sellerPhone}` : ''}
@@ -776,7 +776,7 @@ Registration Fee: ₹${parseFloat(result.registrationFee).toLocaleString('en-IN'
 SELLER INFORMATION
 ------------------
 Name: ${result.sellerName}
-Father's Name: ${result.sellerFatherName}
+Father&apos;s Name: ${result.sellerFatherName}
 ${result.sellerAge ? `Age: ${result.sellerAge}` : ''}
 ${result.sellerAddress ? `Address: ${result.sellerAddress}` : ''}
 
