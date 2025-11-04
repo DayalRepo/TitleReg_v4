@@ -7,31 +7,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "TITLEREG",
   description: "Powered By Project BlockChain",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://titlereg.vercel.app'),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "TITLEREG",
     description: "Powered By Project BlockChain",
     type: "website",
-    url: "/",
     siteName: "TITLEREG",
-    images: [
-      {
-        url: "/logo.jpg",
-        width: 1200,
-        height: 1200,
-        alt: "TITLEREG Logo",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "TITLEREG",
     description: "Powered By Project BlockChain",
-    images: ["/logo.jpg"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.jpg",
   },
 };
 
@@ -43,6 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        
         {/* Material Symbols - using next/font/google for Lexend Deca, external for Material Symbols only */}
         <link
           rel="stylesheet"
