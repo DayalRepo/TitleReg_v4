@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "TITLEREG",
-  description: "Secure, transparent, and immutable property registration and verification system powered by blockchain technology for Indian land and real estate transactions.",
+  description: "Powered By Project BlockChain.",
 };
 
 export default function RootLayout({
