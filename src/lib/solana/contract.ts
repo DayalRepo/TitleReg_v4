@@ -1,4 +1,4 @@
-import { PublicKey, Connection, SystemProgram, Transaction, TransactionInstruction, Keypair, VersionedTransaction } from '@solana/web3.js';
+import { PublicKey, Connection, SystemProgram, Transaction, TransactionInstruction, Keypair } from '@solana/web3.js';
 import { uploadJSONToIPFS } from '../ipfs/pinata';
 
 // Solana Program Configuration
