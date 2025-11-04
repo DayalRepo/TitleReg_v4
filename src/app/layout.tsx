@@ -6,7 +6,37 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "TITLEREG",
+<<<<<<< HEAD
   description: "Powered By Project BlockChain.",
+=======
+  description: "Powered By Project BlockChain",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://titlereg.vercel.app'),
+  openGraph: {
+    title: "TITLEREG",
+    description: "Powered By Project BlockChain",
+    type: "website",
+    url: "/",
+    siteName: "TITLEREG",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "TITLEREG Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TITLEREG",
+    description: "Powered By Project BlockChain",
+    images: ["/logo.jpg"],
+  },
+  icons: {
+    icon: "/logo.jpg",
+    apple: "/logo.jpg",
+  },
+>>>>>>> e412c67 (Add Open Graph and Twitter Card metadata with logo for social media sharing)
 };
 
 export default function RootLayout({
