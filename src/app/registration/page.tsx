@@ -3327,15 +3327,16 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                         <p className="text-gray-400 text-sm">Failed to load image</p>
                       </div>
                       <div className="mt-2 px-2">
-                      <p className="text-xs sm:text-sm text-gray-400 truncate" title={photo.name}>
-                        {photo.name}
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        {(photo.size / 1024).toFixed(2)} KB
-                      </p>
+                        <p className="text-xs sm:text-sm text-gray-400 truncate" title={photo.name}>
+                          {photo.name}
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          {(photo.size / 1024).toFixed(2)} KB
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </motion.div>
           </motion.div>
