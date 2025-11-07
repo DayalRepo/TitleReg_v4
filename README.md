@@ -1,4 +1,4 @@
-# TitleReg - Blockchain-Based Land Title Registration System
+# TITLEREG : Blockchain-Based Land Title Registry.
 
 ## Overview
 
