@@ -179,7 +179,7 @@ export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = searchQuery === '' || 
+    const matchesSearch = searchQuery === '' ||
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesSearch;
@@ -369,7 +369,7 @@ export default function HelpPage() {
                 <h3 className="text-lg font-light text-white mb-4 pb-2 border-b border-gray-800">Document Upload Issues</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   <li>Ensure all documents are in PDF format</li>
-                  <li>Check file size (recommended under 10MB per file)</li>
+                  <li>Check file size (recommended under 4MB per file)</li>
                   <li>Verify documents are not password-protected</li>
                   <li>Ensure documents are clear, readable, and properly scanned</li>
                   <li>Try converting images to PDF if needed</li>

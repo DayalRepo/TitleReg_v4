@@ -29,14 +29,14 @@ interface FormData {
   area: string;
   areaUnit: string;
   propertyDescription: string;
-  
+
   // Step 2: Transaction Details
   transactionType: string;
   considerationAmount: string;
   stampDuty: string;
   registrationFee: string;
   saleAgreementDate: string;
-  
+
   // Step 3: Seller Information
   sellerName: string;
   sellerFatherName: string;
@@ -46,7 +46,7 @@ interface FormData {
   sellerAadhar: string;
   sellerPhone: string;
   sellerEmail: string;
-  
+
   // Step 4: Buyer Information
   buyerName: string;
   buyerFatherName: string;
@@ -56,7 +56,7 @@ interface FormData {
   buyerAadhar: string;
   buyerPhone: string;
   buyerEmail: string;
-  
+
   // Step 5: Documents
   documents: {
     saleDeed: File | null;
@@ -67,7 +67,7 @@ interface FormData {
     aadhar: File | null;
     pan: File | null;
   };
-  
+
   // Witness Information
   witnesses: Array<{
     name: string;
@@ -75,7 +75,7 @@ interface FormData {
     phone: string;
     aadhar: string;
   }>;
-  
+
   // Property Photos
   propertyPhotos: File[];
 }
@@ -83,57 +83,57 @@ interface FormData {
 // Custom Minimalistic Icons
 const PropertyIcon = ({ className = '' }: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <rect x="3" y="6" width="5" height="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <rect x="11" y="6" width="5" height="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <rect x="3" y="13" width="5" height="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <rect x="11" y="13" width="5" height="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <line x1="3" y1="3" x2="17" y2="3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <rect x="3" y="6" width="5" height="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="11" y="6" width="5" height="5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="3" y="13" width="5" height="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="11" y="13" width="5" height="4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="3" y1="3" x2="17" y2="3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
 const TransactionIcon = ({ className = '' }: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M4 6H16M4 10H16M4 14H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <rect x="2" y="3" width="16" height="14" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M4 6H16M4 10H16M4 14H12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <rect x="2" y="3" width="16" height="14" rx="1" stroke="currentColor" strokeWidth="1.5" />
   </svg>
 );
 
 const SellerIcon = ({ className = '' }: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
 const BuyerIcon = ({ className = '' }: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
 const DocumentsIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className={className} fill="currentColor">
-    <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z"/>
+    <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z" />
   </svg>
 );
 
 const WitnessIcon = ({ className = '' }: { className?: string }) => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5"/>
-    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <circle cx="7" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <circle cx="13" cy="6" r="2.5" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M2 18C2 14 4.5 12 7 12C9.5 12 13 14 13 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M7 12C7 14 9.5 16 13 16C16.5 16 18 14 18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
 const ReviewIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className={className} fill="currentColor">
-    <path d="M657-121 544-234l56-56 57 57 127-127 56 56-183 183Zm-537 1v-80h360v80H120Zm0-160v-80h360v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Z"/>
+    <path d="M657-121 544-234l56-56 57 57 127-127 56 56-183 183Zm-537 1v-80h360v80H120Zm0-160v-80h360v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Z" />
   </svg>
 );
 
@@ -141,37 +141,37 @@ const ReviewIcon = ({ className = '' }: { className?: string }) => (
 
 const CloseIcon = ({ className = '' }: { className?: string }) => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-    <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 const UploadIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className={className}>
-    <path d="M440-200h80v-167l64 64 56-57-160-160-160 160 57 56 63-63v167ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
+    <path d="M440-200h80v-167l64 64 56-57-160-160-160 160 57 56 63-63v167ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
   </svg>
 );
 
 const PropertyPhotosIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className={className}>
-    <path d="M40-200v-560h80v560H40Zm160 0v-560h80v560h-80Zm240 0q-33 0-56.5-23.5T360-280v-400q0-33 23.5-56.5T440-760h400q33 0 56.5 23.5T920-680v400q0 33-23.5 56.5T840-200H440Zm0-80h400v-400H440v400Zm40-80h320L696-500l-76 100-56-74-84 114Zm-40 80v-400 400Z"/>
+    <path d="M40-200v-560h80v560H40Zm160 0v-560h80v560h-80Zm240 0q-33 0-56.5-23.5T360-280v-400q0-33 23.5-56.5T440-760h400q33 0 56.5 23.5T920-680v400q0 33-23.5 56.5T840-200H440Zm0-80h400v-400H440v400Zm40-80h320L696-500l-76 100-56-74-84 114Zm-40 80v-400 400Z" />
   </svg>
 );
 
 const ViewImagesIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className={className}>
-    <path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/>
+    <path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" />
   </svg>
 );
 
 const DownloadSummaryIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16" fill="currentColor" className={className}>
-    <path d="m480-280 160-160-56-56-64 62v-166h-80v166l-64-62-56 56 160 160ZM240-80q-33 0-56.5-23.5T160-160v-480l240-240h320q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640H434L240-606v446Zm0 0h480-480Z"/>
+    <path d="m480-280 160-160-56-56-64 62v-166h-80v166l-64-62-56 56 160 160ZM240-80q-33 0-56.5-23.5T160-160v-480l240-240h320q33 0 56.5 23.5T800-800v640q0 33-23.5 56.5T720-80H240Zm0-80h480v-640H434L240-606v446Zm0 0h480-480Z" />
   </svg>
 );
 
 const ValidateIcon = ({ className = '' }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className={className} fill="currentColor">
-    <path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/>
+    <path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z" />
   </svg>
 );
 
@@ -233,9 +233,9 @@ function AnimatedSelect({ value, onChange, options, placeholder = 'Select...', c
 
   // Filter options based on search query
   const filteredOptions = searchable && searchQuery
-    ? options.filter(option => 
-        option.label.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+    ? options.filter(option =>
+      option.label.toLowerCase().includes(searchQuery.toLowerCase())
+    )
     : options;
 
   const selectedLabel = options.find(opt => opt.value === value)?.label || placeholder;
@@ -251,8 +251,8 @@ function AnimatedSelect({ value, onChange, options, placeholder = 'Select...', c
         className="w-full bg-black border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 flex items-center justify-between transition-colors"
       >
         <span className={value ? 'text-white' : 'text-gray-400'}>{selectedLabel}</span>
-        <ChevronDown 
-          size={18} 
+        <ChevronDown
+          size={18}
           className={`text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
@@ -282,7 +282,7 @@ function AnimatedSelect({ value, onChange, options, placeholder = 'Select...', c
                 </div>
               </div>
             )}
-            
+
             <div className="max-h-64 overflow-y-auto custom-scrollbar">
               {filteredOptions.length > 0 ? (
                 filteredOptions.map((option, index) => (
@@ -294,9 +294,8 @@ function AnimatedSelect({ value, onChange, options, placeholder = 'Select...', c
                         setIsOpen(false);
                         setSearchQuery('');
                       }}
-                      className={`w-full text-left px-4 py-3 text-white hover:bg-gray-900 transition-colors ${
-                        value === option.value ? 'bg-gray-900' : ''
-                      }`}
+                      className={`w-full text-left px-4 py-3 text-white hover:bg-gray-900 transition-colors ${value === option.value ? 'bg-gray-900' : ''
+                        }`}
                     >
                       {option.label}
                     </button>
@@ -394,11 +393,11 @@ export default function RegistrationPage() {
   // Detect wallet changes and reset form if different wallet is used
   useEffect(() => {
     const currentWalletAddress = publicKey?.toString() || null;
-    
+
     // Check if wallet has changed (only if both are not null)
-    if (previousWalletAddress.current !== null && 
-        currentWalletAddress !== null &&
-        currentWalletAddress !== previousWalletAddress.current) {
+    if (previousWalletAddress.current !== null &&
+      currentWalletAddress !== null &&
+      currentWalletAddress !== previousWalletAddress.current) {
       // Different wallet detected - clear all saved data and reset form
       if (previousWalletAddress.current) {
         deleteDraft(previousWalletAddress.current).catch(console.error);
@@ -456,7 +455,7 @@ export default function RegistrationPage() {
       setFormStartTime(Date.now());
       hasRestoredFromDraft.current = false;
     }
-    
+
     // Update previous wallet address (only when connected)
     if (currentWalletAddress !== null) {
       previousWalletAddress.current = currentWalletAddress;
@@ -467,7 +466,7 @@ export default function RegistrationPage() {
   useEffect(() => {
     const loadDraft = async () => {
       if (!publicKey?.toString()) return;
-      
+
       try {
         const draft = await getDraft(publicKey.toString());
         if (draft && draft.form_data) {
@@ -571,7 +570,7 @@ export default function RegistrationPage() {
       // Pause timer when wallet is disconnected
       return;
     }
-    
+
     const timer = setInterval(() => {
       setFormTimeElapsed(Date.now() - formStartTime);
     }, 1000);
@@ -661,14 +660,14 @@ export default function RegistrationPage() {
   };
 
   const handleFileUpload = (documentType: keyof FormData['documents'], file: File | null) => {
-    if (file && file.size > 10 * 1024 * 1024) {
+    if (file && file.size > 4 * 1024 * 1024) {
       setErrors(prev => ({
         ...prev,
-        [documentType]: 'File size must be less than 10MB',
+        [documentType]: 'File size must be less than 4MB',
       }));
       return;
     }
-    
+
     setFormData(prev => ({
       ...prev,
       documents: {
@@ -676,7 +675,7 @@ export default function RegistrationPage() {
         [documentType]: file,
       },
     }));
-    
+
     // Clear error when file is uploaded
     if (file && errors[documentType]) {
       setErrors(prev => {
@@ -692,7 +691,7 @@ export default function RegistrationPage() {
       const newPhotos = Array.from(files);
       setFormData(prev => {
         const updatedPhotos = [...prev.propertyPhotos, ...newPhotos].slice(0, 10); // Max 10 photos
-        
+
         // Create and store URLs for all photos (including new ones)
         setPropertyPhotoUrls(prevUrls => {
           const newUrls = new Map(prevUrls);
@@ -714,7 +713,7 @@ export default function RegistrationPage() {
           });
           return newUrls;
         });
-        
+
         return {
           ...prev,
           propertyPhotos: updatedPhotos,
@@ -741,7 +740,7 @@ export default function RegistrationPage() {
       });
       return newUrls;
     });
-    
+
     setFormData(prev => ({
       ...prev,
       propertyPhotos: prev.propertyPhotos.filter((_, i) => i !== index),
@@ -840,7 +839,7 @@ export default function RegistrationPage() {
     const seconds = Math.floor(ms / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
-    
+
     if (hours > 0) {
       return `${hours}h ${minutes % 60}m`;
     } else if (minutes > 0) {
@@ -1013,8 +1012,8 @@ Witness ${i + 1}:
 DOCUMENTS UPLOADED
 ------------------
 ${Object.entries(formData.documents)
-  .map(([key, file]) => `${key}: ${file ? file.name : 'Not uploaded'}`)
-  .join('\n')}
+        .map(([key, file]) => `${key}: ${file ? file.name : 'Not uploaded'}`)
+        .join('\n')}
 
 PROPERTY PHOTOS
 ---------------
@@ -1159,32 +1158,32 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
 
       case 5:
         if (!formData.documents.saleDeed) newErrors.saleDeed = 'Sale Deed is required';
-        else if (formData.documents.saleDeed && formData.documents.saleDeed.size > 10 * 1024 * 1024) {
-          newErrors.saleDeed = 'File size must be less than 10MB';
+        else if (formData.documents.saleDeed && formData.documents.saleDeed.size > 4 * 1024 * 1024) {
+          newErrors.saleDeed = 'File size must be less than 4MB';
         }
         if (!formData.documents.khata) newErrors.khata = 'Khata Certificate is required';
-        else if (formData.documents.khata && formData.documents.khata.size > 10 * 1024 * 1024) {
-          newErrors.khata = 'File size must be less than 10MB';
+        else if (formData.documents.khata && formData.documents.khata.size > 4 * 1024 * 1024) {
+          newErrors.khata = 'File size must be less than 4MB';
         }
         if (!formData.documents.taxReceipt) newErrors.taxReceipt = 'Property Tax Receipt is required';
-        else if (formData.documents.taxReceipt && formData.documents.taxReceipt.size > 10 * 1024 * 1024) {
-          newErrors.taxReceipt = 'File size must be less than 10MB';
+        else if (formData.documents.taxReceipt && formData.documents.taxReceipt.size > 4 * 1024 * 1024) {
+          newErrors.taxReceipt = 'File size must be less than 4MB';
         }
         if (!formData.documents.encumbrance) newErrors.encumbrance = 'Encumbrance Certificate is required';
-        else if (formData.documents.encumbrance && formData.documents.encumbrance.size > 10 * 1024 * 1024) {
-          newErrors.encumbrance = 'File size must be less than 10MB';
+        else if (formData.documents.encumbrance && formData.documents.encumbrance.size > 4 * 1024 * 1024) {
+          newErrors.encumbrance = 'File size must be less than 4MB';
         }
         if (!formData.documents.surveySketch) newErrors.surveySketch = 'Survey Sketch is required';
-        else if (formData.documents.surveySketch && formData.documents.surveySketch.size > 10 * 1024 * 1024) {
-          newErrors.surveySketch = 'File size must be less than 10MB';
+        else if (formData.documents.surveySketch && formData.documents.surveySketch.size > 4 * 1024 * 1024) {
+          newErrors.surveySketch = 'File size must be less than 4MB';
         }
         if (!formData.documents.aadhar) newErrors.aadhar = 'Aadhar Card is required';
-        else if (formData.documents.aadhar && formData.documents.aadhar.size > 10 * 1024 * 1024) {
-          newErrors.aadhar = 'File size must be less than 10MB';
+        else if (formData.documents.aadhar && formData.documents.aadhar.size > 4 * 1024 * 1024) {
+          newErrors.aadhar = 'File size must be less than 4MB';
         }
         if (!formData.documents.pan) newErrors.pan = 'PAN Card is required';
-        else if (formData.documents.pan && formData.documents.pan.size > 10 * 1024 * 1024) {
-          newErrors.pan = 'File size must be less than 10MB';
+        else if (formData.documents.pan && formData.documents.pan.size > 4 * 1024 * 1024) {
+          newErrors.pan = 'File size must be less than 4MB';
         }
         break;
 
@@ -1213,7 +1212,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
       setSubmitError('Please connect your wallet before proceeding with registration.');
       return;
     }
-    
+
     if (validateStep(currentStep)) {
       // Save draft and show notification when completing a step
       if (connected && publicKey?.toString()) {
@@ -1238,7 +1237,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
             console.error('Failed to save draft:', error);
           });
       }
-      
+
       if (currentStep < steps.length) {
         setCurrentStep(currentStep + 1);
         // Scroll to top of page when moving to next step
@@ -1349,14 +1348,14 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
     const timer = setTimeout(() => {
       setCountdown(prevCountdown => {
         const newCountdown = prevCountdown - 1;
-        
+
         // Only redirect when countdown reaches 0
         if (newCountdown === 0) {
           setTimeout(() => {
             handleSuccessClose();
           }, 500);
         }
-        
+
         return newCountdown;
       });
     }, 1000);
@@ -1375,7 +1374,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         break;
       }
     }
-    
+
     if (!isValid) {
       setIsSubmitting(false);
       return;
@@ -1387,15 +1386,15 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // Generate registration ID
       const regId = `REG-${Date.now().toString().slice(-8)}`;
       setRegistrationId(regId);
-      
+
       // Upload documents to IPFS
       const documentsIPFS: Record<string, { name: string; ipfsHash: string; mimeType: string }> = {};
       const documentUploadPromises: Promise<void>[] = [];
-      
+
       for (const [key, file] of Object.entries(formData.documents)) {
         if (file) {
           const uploadPromise = (async () => {
@@ -1417,7 +1416,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
           documentUploadPromises.push(uploadPromise);
         }
       }
-      
+
       // Wait for all documents to upload
       if (documentUploadPromises.length > 0) {
         await Promise.all(documentUploadPromises);
@@ -1446,12 +1445,12 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
 
           console.log(`Starting upload of ${validPhotos.length} property photos...`);
           const uploadedPhotos = await uploadFilesToIPFS(validPhotos);
-          
+
           // Validate all photos were uploaded
           if (uploadedPhotos.length !== validPhotos.length) {
             throw new Error(`Only ${uploadedPhotos.length} of ${validPhotos.length} photos were uploaded successfully`);
           }
-          
+
           // Map the uploaded photos to match the expected format (hash -> ipfsHash)
           photosIPFS = uploadedPhotos.map((photo, index) => {
             if (!photo.hash) {
@@ -1463,12 +1462,12 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
               mimeType: photo.mimeType || 'image/jpeg',
             };
           });
-          
+
           console.log(`✅ Successfully uploaded ${photosIPFS.length} property photos to IPFS`);
         } catch (error) {
           console.error('❌ Error uploading photos to IPFS:', error);
           const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-          
+
           // Provide more helpful error messages for mobile
           if (errorMessage.includes('timeout') || errorMessage.includes('Network')) {
             throw new Error(`Network error uploading property photos. Please check your internet connection and try again.`);
@@ -1493,7 +1492,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         registration_date: registrationDate,
         wallet_address: walletAddress,
         status: 'verified',
-        
+
         // Property Details
         property_type: formData.propertyType,
         survey_number: formData.surveyNumber,
@@ -1506,14 +1505,14 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         area: formData.area,
         area_unit: formData.areaUnit,
         property_description: formData.propertyDescription || undefined,
-        
+
         // Transaction Details
         transaction_type: formData.transactionType,
         consideration_amount: formData.considerationAmount,
         stamp_duty: formData.stampDuty,
         registration_fee: formData.registrationFee,
         sale_agreement_date: formData.saleAgreementDate,
-        
+
         // Seller Information
         seller_name: formData.sellerName,
         seller_father_name: formData.sellerFatherName,
@@ -1523,7 +1522,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         seller_aadhar: formData.sellerAadhar || undefined,
         seller_phone: formData.sellerPhone || undefined,
         seller_email: formData.sellerEmail || undefined,
-        
+
         // Buyer Information
         buyer_name: formData.buyerName,
         buyer_father_name: formData.buyerFatherName,
@@ -1533,13 +1532,13 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         buyer_aadhar: formData.buyerAadhar || undefined,
         buyer_phone: formData.buyerPhone || undefined,
         buyer_email: formData.buyerEmail || undefined,
-        
+
         // Witnesses
         witnesses: formData.witnesses.length > 0 ? formData.witnesses : undefined,
-        
+
         // Documents (stored as IPFS hashes)
         documents: Object.keys(documentsIPFS).length > 0 ? documentsIPFS : undefined,
-        
+
         // Property Photos (stored as IPFS hashes)
         property_photos: photosIPFS.length > 0 ? photosIPFS : undefined,
       };
@@ -1548,7 +1547,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
       if (!connected || !wallet || !publicKey) {
         throw new Error('Wallet not connected. Please connect your wallet to submit registration.');
       }
-      
+
       // Verify wallet has publicKey access
       const walletPublicKey = wallet?.adapter?.publicKey || publicKey;
       if (!walletPublicKey) {
@@ -1587,12 +1586,12 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
             buyer_father_name: registrationData.buyer_father_name,
           }
         );
-        
+
         console.log('✅ Blockchain transaction successful:', blockchainResult.signature);
       } catch (error) {
         console.error('❌ Failed to save to Solana blockchain:', error);
         const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-        
+
         // Provide mobile-specific error messages
         if (errorMessage.includes('User rejected') || errorMessage.includes('User cancelled')) {
           throw new Error('Transaction cancelled. Please approve the transaction in your wallet to complete registration.');
@@ -1616,10 +1615,10 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
           console.error('Failed to delete draft after submission:', error);
         }
       }
-      
+
       // Automatically send email notification
       await sendEmailNotification();
-      
+
       setSubmitSuccess(true);
     } catch (error) {
       console.error('Submission error:', error);
@@ -1658,7 +1657,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
       type: string;
     }> = [];
     const uploadedDocs = Object.entries(formData.documents);
-    
+
     uploadedDocs.forEach(([key, file]) => {
       if (file) {
         const result: {
@@ -1726,12 +1725,12 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
     }
 
     setSendingEmail(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       setEmailSent(true);
-      
+
       // Hide notification after 3 seconds
       setTimeout(() => setEmailSent(false), 3000);
     } catch (error) {
@@ -1771,7 +1770,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         return (
           <div className="space-y-4 sm:space-y-6">
             <h2 className={`${lexendDeca.className} text-xl sm:text-2xl font-medium mb-4 sm:mb-6`}>Property Details</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm text-white mb-2">Property Type *</label>
@@ -1802,9 +1801,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.surveyNumber}
                   onChange={(e) => handleInputChange('surveyNumber', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.surveyNumber ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.surveyNumber ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter Survey Number"
                 />
                 {errors.surveyNumber && (
@@ -1833,9 +1831,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                     type="number"
                     value={formData.area}
                     onChange={(e) => handleInputChange('area', e.target.value)}
-                    className={`flex-1 min-w-0 bg-black/40 border rounded-lg px-3 sm:px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                      errors.area ? 'border-red-500' : 'border-gray-700'
-                    }`}
+                    className={`flex-1 min-w-0 bg-black/40 border rounded-lg px-3 sm:px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.area ? 'border-red-500' : 'border-gray-700'
+                      }`}
                     placeholder="Enter Area"
                   />
                   <AnimatedSelect
@@ -1865,9 +1862,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.village}
                   onChange={(e) => handleInputChange('village', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.village ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.village ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter Village/Town"
                 />
                 {errors.village && (
@@ -1884,9 +1880,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.taluka}
                   onChange={(e) => handleInputChange('taluka', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.taluka ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.taluka ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter Taluka"
                 />
                 {errors.taluka && (
@@ -1903,9 +1898,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.district}
                   onChange={(e) => handleInputChange('district', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.district ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.district ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter District"
                 />
                 {errors.district && (
@@ -1939,9 +1933,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.pincode}
                   onChange={(e) => handleInputChange('pincode', e.target.value)}
-                      className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                        errors.pincode ? 'border-red-500' : 'border-gray-700'
-                      }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.pincode ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter PIN Code"
                   maxLength={6}
                 />
@@ -1970,7 +1963,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         return (
           <div className="space-y-4 sm:space-y-6">
             <h2 className={`${lexendDeca.className} text-xl sm:text-2xl font-medium mb-4 sm:mb-6`}>Transaction Details</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm text-white mb-2">Transaction Type *</label>
@@ -2001,9 +1994,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="date"
                   value={formData.saleAgreementDate}
                   onChange={(e) => handleInputChange('saleAgreementDate', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.saleAgreementDate ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.saleAgreementDate ? 'border-red-500' : 'border-gray-700'
+                    }`}
                 />
                 {errors.saleAgreementDate && (
                   <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
@@ -2019,9 +2011,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="number"
                   value={formData.considerationAmount}
                   onChange={(e) => handleInputChange('considerationAmount', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.considerationAmount ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.considerationAmount ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter consideration amount"
                 />
                 {errors.considerationAmount && (
@@ -2061,7 +2052,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         return (
           <div className="space-y-4 sm:space-y-6">
             <h2 className={`${lexendDeca.className} text-xl sm:text-2xl font-medium mb-4 sm:mb-6`}>Seller Information</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm text-white mb-2">Seller Name *</label>
@@ -2069,9 +2060,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.sellerName}
                   onChange={(e) => handleInputChange('sellerName', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerName ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerName ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter seller full name"
                 />
                 {errors.sellerName && (
@@ -2088,9 +2078,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.sellerFatherName}
                   onChange={(e) => handleInputChange('sellerFatherName', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerFatherName ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerFatherName ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter father&apos;s/husband&apos;s name"
                 />
                 {errors.sellerFatherName && (
@@ -2107,9 +2096,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="number"
                   value={formData.sellerAge}
                   onChange={(e) => handleInputChange('sellerAge', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerAge ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerAge ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter age"
                 />
                 {errors.sellerAge && (
@@ -2126,9 +2114,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.sellerAadhar}
                   onChange={(e) => handleInputChange('sellerAadhar', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerAadhar ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerAadhar ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter 12-digit Aadhar number"
                   maxLength={12}
                 />
@@ -2146,9 +2133,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.sellerPan}
                   onChange={(e) => handleInputChange('sellerPan', e.target.value.toUpperCase())}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerPan ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerPan ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter PAN number"
                   maxLength={10}
                 />
@@ -2166,9 +2152,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="tel"
                   value={formData.sellerPhone}
                   onChange={(e) => handleInputChange('sellerPhone', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerPhone ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerPhone ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter 10-digit phone number"
                   maxLength={10}
                 />
@@ -2186,9 +2171,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="email"
                   value={formData.sellerEmail}
                   onChange={(e) => handleInputChange('sellerEmail', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.sellerEmail ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.sellerEmail ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter email address"
                 />
                 {errors.sellerEmail && (
@@ -2204,9 +2188,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                 <textarea
                   value={formData.sellerAddress}
                   onChange={(e) => handleInputChange('sellerAddress', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${
-                    errors.sellerAddress ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${errors.sellerAddress ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter complete address"
                 />
                 {errors.sellerAddress && (
@@ -2224,7 +2207,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         return (
           <div className="space-y-4 sm:space-y-6">
             <h2 className={`${lexendDeca.className} text-xl sm:text-2xl font-medium mb-4 sm:mb-6`}>Buyer Information</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm text-white mb-2">Buyer Name *</label>
@@ -2232,9 +2215,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.buyerName}
                   onChange={(e) => handleInputChange('buyerName', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerName ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerName ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter buyer full name"
                 />
                 {errors.buyerName && (
@@ -2251,9 +2233,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.buyerFatherName}
                   onChange={(e) => handleInputChange('buyerFatherName', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerFatherName ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerFatherName ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter father&apos;s/husband&apos;s name"
                 />
                 {errors.buyerFatherName && (
@@ -2270,9 +2251,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="number"
                   value={formData.buyerAge}
                   onChange={(e) => handleInputChange('buyerAge', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerAge ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerAge ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter age"
                 />
                 {errors.buyerAge && (
@@ -2289,9 +2269,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.buyerAadhar}
                   onChange={(e) => handleInputChange('buyerAadhar', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerAadhar ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerAadhar ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter 12-digit Aadhar number"
                   maxLength={12}
                 />
@@ -2309,9 +2288,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="text"
                   value={formData.buyerPan}
                   onChange={(e) => handleInputChange('buyerPan', e.target.value.toUpperCase())}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerPan ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerPan ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter PAN number"
                   maxLength={10}
                 />
@@ -2329,9 +2307,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="tel"
                   value={formData.buyerPhone}
                   onChange={(e) => handleInputChange('buyerPhone', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerPhone ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerPhone ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter 10-digit phone number"
                   maxLength={10}
                 />
@@ -2349,9 +2326,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   type="email"
                   value={formData.buyerEmail}
                   onChange={(e) => handleInputChange('buyerEmail', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                    errors.buyerEmail ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors.buyerEmail ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter email address"
                 />
                 {errors.buyerEmail && (
@@ -2367,9 +2343,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                 <textarea
                   value={formData.buyerAddress}
                   onChange={(e) => handleInputChange('buyerAddress', e.target.value)}
-                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${
-                    errors.buyerAddress ? 'border-red-500' : 'border-gray-700'
-                  }`}
+                  className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${errors.buyerAddress ? 'border-red-500' : 'border-gray-700'
+                    }`}
                   placeholder="Enter complete address"
                 />
                 {errors.buyerAddress && (
@@ -2387,7 +2362,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
         return (
           <div className="space-y-4 sm:space-y-6">
             <h2 className={`${lexendDeca.className} text-xl sm:text-2xl font-medium mb-4 sm:mb-6`}>Upload Documents & Photos</h2>
-            
+
             <div className="space-y-4 sm:space-y-6">
               <div>
                 <h3 className={`${lexendDeca.className} text-lg font-medium mb-4`}>Required Documents</h3>
@@ -2423,9 +2398,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                         />
                         <label
                           htmlFor={`file-${key}`}
-                      className={`flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-black/40 border rounded-lg cursor-pointer hover:border-gray-600 transition-colors ${
-                        errors[key] ? 'border-red-500' : 'border-gray-700'
-                      }`}
+                          className={`flex items-center gap-2 sm:gap-3 p-3 sm:p-4 bg-black/40 border rounded-lg cursor-pointer hover:border-gray-600 transition-colors ${errors[key] ? 'border-red-500' : 'border-gray-700'
+                            }`}
                         >
                           <UploadIcon className="text-gray-400" />
                           <span className="text-sm text-gray-300 flex-1">
@@ -2470,7 +2444,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
               <div className="border-t border-gray-700 pt-6 hidden sm:block">
                 <h3 className={`${lexendDeca.className} text-lg font-medium mb-4`}>Property Photos</h3>
                 <p className="text-sm text-white/80 mb-4">Upload up to 10 photos of the property (Optional)</p>
-                
+
                 <div className="mb-4">
                   <input
                     type="file"
@@ -2497,7 +2471,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                       if (!propertyPhotoUrls.has(index)) {
                         setPropertyPhotoUrls(prev => new Map(prev).set(index, photoUrl));
                       }
-                      
+
                       return (
                         <div key={index} className="relative group">
                           <img
@@ -2511,14 +2485,14 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                               e.currentTarget.src = newUrl;
                             }}
                           />
-                        <button
-                          onClick={() => removePhoto(index)}
-                          className="absolute top-2 right-2 p-1.5 bg-black/60 border border-gray-600 rounded opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/80"
-                          title="Remove"
-                        >
-                          <CloseIcon className="text-white" />
-                        </button>
-                      </div>
+                          <button
+                            onClick={() => removePhoto(index)}
+                            className="absolute top-2 right-2 p-1.5 bg-black/60 border border-gray-600 rounded opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/80"
+                            title="Remove"
+                          >
+                            <CloseIcon className="text-white" />
+                          </button>
+                        </div>
                       );
                     })}
                   </div>
@@ -2542,7 +2516,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                 <span className="sm:hidden">Add</span>
               </button>
             </div>
-            
+
             <div className="space-y-4 sm:space-y-6">
               {formData.witnesses.map((witness, index) => (
                 <div key={index} className="bg-black/40 border border-gray-700 rounded-lg p-4 sm:p-6">
@@ -2557,7 +2531,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                       </button>
                     )}
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label className="block text-sm text-white mb-2">Name *</label>
@@ -2574,9 +2548,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                             });
                           }
                         }}
-                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                          errors[`witness${index}name`] ? 'border-red-500' : 'border-gray-700'
-                        }`}
+                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors[`witness${index}name`] ? 'border-red-500' : 'border-gray-700'
+                          }`}
                         placeholder="Enter witness name"
                       />
                       {errors[`witness${index}name`] && (
@@ -2604,9 +2577,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                             });
                           }
                         }}
-                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                          errors[`witness${index}aadhar`] ? 'border-red-500' : 'border-gray-700'
-                        }`}
+                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors[`witness${index}aadhar`] ? 'border-red-500' : 'border-gray-700'
+                          }`}
                         placeholder="Enter 12-digit Aadhar"
                         maxLength={12}
                       />
@@ -2635,9 +2607,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                             });
                           }
                         }}
-                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${
-                          errors[`witness${index}phone`] ? 'border-red-500' : 'border-gray-700'
-                        }`}
+                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 ${errors[`witness${index}phone`] ? 'border-red-500' : 'border-gray-700'
+                          }`}
                         placeholder="Enter 10-digit phone"
                         maxLength={10}
                       />
@@ -2663,9 +2634,8 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                             });
                           }
                         }}
-                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${
-                          errors[`witness${index}address`] ? 'border-red-500' : 'border-gray-700'
-                        }`}
+                        className={`w-full bg-black/40 border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-600 h-24 resize-none ${errors[`witness${index}address`] ? 'border-red-500' : 'border-gray-700'
+                          }`}
                         placeholder="Enter complete address"
                       />
                       {errors[`witness${index}address`] && (
@@ -2705,7 +2675,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                 </button>
               </div>
             </div>
-            
+
             <div className="space-y-6 bg-black/40 border border-gray-700 rounded-lg p-6">
               <div>
                 <h3 className={`${lexendDeca.className} text-lg font-medium mb-4`}>Property Details</h3>
@@ -2801,7 +2771,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                           if (!propertyPhotoUrls.has(index)) {
                             setPropertyPhotoUrls(prev => new Map(prev).set(index, photoUrl));
                           }
-                          
+
                           return (
                             <div key={index} className="relative group">
                               <img
@@ -2827,7 +2797,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                           );
                         })}
                         {formData.propertyPhotos.length > 8 && (
-                          <div 
+                          <div
                             className="w-full h-24 sm:h-32 md:h-40 bg-black/40 border border-gray-700 rounded-lg flex items-center justify-center cursor-pointer hover:border-gray-500 transition-colors"
                             onClick={() => setShowPropertyPhotos(true)}
                           >
@@ -2843,7 +2813,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
 
             <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-lg p-4">
               <p className="text-sm text-yellow-200">
-                By submitting this form, you agree that all information provided is accurate and true. 
+                By submitting this form, you agree that all information provided is accurate and true.
                 False information may lead to legal consequences.
               </p>
             </div>
@@ -2920,15 +2890,14 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
               const isActive = currentStep === step.id;
               // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const isCompleted = currentStep > step.id;
-              
+
               return (
                 <React.Fragment key={step.id}>
                   <div className="flex items-center flex-1">
                     <div className="flex flex-col items-center flex-1 relative">
                       <span
-                        className={`text-xs text-center ${
-                          isActive ? 'text-white' : 'text-white/60'
-                        }`}
+                        className={`text-xs text-center ${isActive ? 'text-white' : 'text-white/60'
+                          }`}
                       >
                         {step.title}
                       </span>
@@ -2970,11 +2939,10 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
           <button
             onClick={prevStep}
             disabled={currentStep === 1 || !connected}
-            className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${
-              currentStep === 1 || !connected
+            className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${currentStep === 1 || !connected
                 ? 'bg-gray-800 text-gray-500 cursor-not-allowed'
                 : 'bg-white/10 text-white hover:bg-white/20 border border-gray-700'
-            }`}
+              }`}
           >
             <ChevronLeft size={18} className="sm:w-5 sm:h-5" />
             <span className="hidden sm:inline">Previous</span>
@@ -2984,11 +2952,10 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
             <button
               onClick={nextStep}
               disabled={!connected}
-              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${
-                !connected
+              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${!connected
                   ? 'bg-gray-800 text-gray-500 cursor-not-allowed'
                   : 'bg-white text-black hover:bg-gray-100'
-              }`}
+                }`}
             >
               Next
               <ChevronRight size={18} className="sm:w-5 sm:h-5" />
@@ -2997,11 +2964,10 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
             <button
               onClick={handleSubmit}
               disabled={isSubmitting || !connected}
-              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${
-                !connected || isSubmitting
+              className={`flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors ${!connected || isSubmitting
                   ? 'bg-gray-800 text-gray-500 cursor-not-allowed opacity-50'
                   : 'bg-white text-black hover:bg-gray-100'
-              }`}
+                }`}
             >
               {isSubmitting ? (
                 <>
@@ -3049,7 +3015,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   <X size={20} className="text-white" />
                 </button>
               </div>
-              
+
               <div className="mt-4">
                 {documentPreview.file.type.startsWith('image/') ? (
                   <img
@@ -3096,7 +3062,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                 <h3 className={`${lexendDeca.className} text-2xl font-medium mb-2`}>
                   Registration Submitted Successfully!
                 </h3>
-                
+
                 {/* Progress bar showing 100% */}
                 <div className="w-full mb-4">
                   <div className="flex items-center justify-between mb-2">
@@ -3150,7 +3116,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                     Redirecting to home in {countdown} seconds...
                   </p>
                 )}
-                
+
                 <button
                   onClick={handleSuccessClose}
                   className="px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors w-full"
@@ -3228,7 +3194,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   <X size={20} className="text-white" />
                 </button>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
                   { key: 'saleDeed', label: 'Sale Deed' },
@@ -3327,7 +3293,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   <X size={20} className="text-white" />
                 </button>
               </div>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {formData.propertyPhotos.map((photo, index) => {
                   // Use stored URL or create one if not available
@@ -3335,7 +3301,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   if (!propertyPhotoUrls.has(index)) {
                     setPropertyPhotoUrls(prev => new Map(prev).set(index, photoUrl));
                   }
-                  
+
                   return (
                     <div key={index} className="relative group">
                       <img
@@ -3400,7 +3366,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   <X size={20} className="text-white" />
                 </button>
               </div>
-              
+
               <div className="flex flex-col items-center">
                 <div className="bg-white p-4 rounded-lg mb-4">
                   <QRCodeSVG
@@ -3456,7 +3422,7 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   <X size={20} className="text-white" />
                 </button>
               </div>
-              
+
               <div className="space-y-3">
                 {validateDocuments().map((doc, index) => {
                   const docLabels: Record<string, string> = {
@@ -3472,13 +3438,12 @@ Registration ID: REG-${Date.now().toString().slice(-8)}
                   return (
                     <div
                       key={index}
-                      className={`bg-black/40 border rounded-lg p-4 ${
-                        doc.status === 'valid'
+                      className={`bg-black/40 border rounded-lg p-4 ${doc.status === 'valid'
                           ? 'border-green-500/50 bg-green-500/10'
                           : doc.status === 'warning'
-                          ? 'border-yellow-500/50 bg-yellow-500/10'
-                          : 'border-red-500/50 bg-red-500/10'
-                      }`}
+                            ? 'border-yellow-500/50 bg-yellow-500/10'
+                            : 'border-red-500/50 bg-red-500/10'
+                        }`}
                     >
                       <div className="flex items-start gap-3">
                         {doc.status === 'valid' ? (
